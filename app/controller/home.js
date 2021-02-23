@@ -8,7 +8,7 @@ class HomeController extends Controller {
     ctx.body = 'hi, egg';
   }
 
-  async get_GJCD() {
+  async getGJCD() {
     const { ctx } = this;
     const connection = await this.app.oracle.getConnection();
     const result = await connection.execute('SELECT * from VIEW_GJCD');
